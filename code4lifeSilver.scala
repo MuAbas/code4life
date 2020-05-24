@@ -9,7 +9,7 @@ object Player extends App {                                             //given 
         val Array(a, b, c, d, e) = (readLine split " ").map (_.toInt)   //given code
     }                                                                   //given code
 
-    class Sample{ //Sample object that holds the following values/attributes
+    class Sample{ //Sample class that holds the following values/attributes
         var sampleId = 0
         var carriedBy = 0
         var rank = 0
