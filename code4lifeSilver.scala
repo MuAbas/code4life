@@ -16,7 +16,7 @@ object Player extends App {                                             //given 
         var health = 0
         var cost = Array.empty[Int]
         var diagnosed = false
-        def initialize(a:Int, b:Int, c:Int, d:Int, e:Array[Int]) = { //method to initialize the values (I didn't use a constructor)
+        def initialize(a:Int, b:Int, c:Int, d:Int, e:Array[Int]) = { //function to initialize the values (I didn't use a constructor)
             sampleId = a
             carriedBy = b
             rank = c
