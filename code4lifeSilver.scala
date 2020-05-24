@@ -31,11 +31,11 @@ object Player extends App {                                             //given 
 
     // game loop
     while(true) {
-        var samples = new ArrayBuffer[Sample]() //samples array that will hold all samples carried by me
+        var samples = new ArrayBuffer[Sample]() //samples array that will hold all samples carried by the robot
 
-        var myStorage = Array.empty[Int] //array of molecules I currently hold
-        var myExpertise = Array.empty[Int] //array of expertise I currently have
-        var myTarget = "" //my position
+        var myStorage = Array.empty[Int] //array of molecules the robot currently holds
+        var myExpertise = Array.empty[Int] //array of expertise the robotI currently has
+        var myTarget = "" //the robot's position
 
         for(i <- 0 until 2) {                                                                                       //given code
             val Array(target, _eta, _score, _storageA, _storageB, _storageC, _storageD, _storageE, _expertiseA,     //given code
@@ -55,7 +55,7 @@ object Player extends App {                                             //given 
             if (i == 0){ //if the index is 0, then it's me (my robot)
                 myStorage = Array(storageA, storageB, storageC, storageD, storageE) //assign myStorage array's values
                 myExpertise = Array(expertiseA, expertiseB, expertiseC, expertiseD, expertiseE) //assign myExpertise array's values
-                myTarget = target //update my position
+                myTarget = target //update the position
             }
         }
         val Array(availableA, availableB, availableC, availableD, availableE) = (readLine split " ").map (_.toInt)                          //given code
@@ -73,7 +73,7 @@ object Player extends App {                                             //given 
             val costE = _costE.toInt                                                                                                        //given code
 
             val cost = Array(costA, costB, costC, costD, costE) //an array of this sample's molecule costs
-            if(carriedBy == 0){ //if the sample is carried by me
+            if(carriedBy == 0){ //if the sample is carried by my robot
                 val sample = new Sample() //create, initialize and add this sample to the samples array
                 sample.initialize(sampleId, carriedBy, rank, health, cost);
                 samples += sample
