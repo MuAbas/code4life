@@ -30,4 +30,5 @@ The previous strategy didn't change much, except:
 3. After obtaining these samples from the SAMPLES module, diagnose every one of them at the DIAGNOSE module
 4. If possible, go to the MOLECULES module and connect all needed molecules for one of the diagnosed samples, after that, connect all needed molecules for the other samples until reaching the limit of molecules that can be carried (10)
 5. If no more molecules can be carried/obtained and if there are at least 2 samples that can be researched, then go to the LABORATORY module and connect all fit samples (their needed molecules are acquired)
-6. If no more molecules can be carried and no sample is fit to connect, then return one of the samples to the cloud to free up space for new samples
+6. If no more molecules can be carried and no sample is fit to connect at the LABORATORY module, then return one of the samples to the cloud at the DIAGNOSE module
+7. All samples (carried ones) should be either returned to the cloud at the DIAGNOSE module or connected at the LABORATORY module before acquiring new samples from the SAMPLES module
